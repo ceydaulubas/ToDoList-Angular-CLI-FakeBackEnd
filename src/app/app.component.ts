@@ -25,4 +25,8 @@ export class AppComponent {
       this.model.items.push(new TodoItem(value,false))
     }
   }
+
+  deleteItem(){
+
+  }
 }
