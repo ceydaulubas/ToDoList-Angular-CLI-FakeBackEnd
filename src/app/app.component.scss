@@ -1,33 +1,53 @@
-.todotable{
-  border: 5px solid #FFFF00;
-  width: 500px;
+$primary-color: purple;
+
+.navbar {
+  justify-content: space-between;
+  margin-bottom: 2%;
+  background-color: $primary-color;
+  // span {
+  //   padding-right: 1rem;
+  // }
 }
 
-.mat-display-1{
-  margin-top: 2%;
-  margin-bottom: 1%;
-  text-align: center
+.main {
+  background-color: rgba(1, 0, 7, 0.884);
+  color: white;
+  width: 50%;
+  text-align: center;
+  border: 5px solid #817681;
+  padding: 10px;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
-button{
+button {
   margin-left: 1rem;
 }
 
-.navbar{
-  justify-content: space-between;
-  margin-bottom: 2%;
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
 }
 
-span{
-  padding-right: 1rem;
+.check-box {
+  padding: 2%;
 }
 
-footer{
- position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: purple;
-   color: white;
-   text-align: center;
+tr {
+  display:flex;
+  align-items:center;
+  height:50px;
+}
+
+.trash{
+  float: right;
+
 }
