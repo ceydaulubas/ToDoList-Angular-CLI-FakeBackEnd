@@ -27,6 +27,30 @@ button {
   margin-left: 1rem;
 }
 
+.check-box {
+  padding: 2%;
+}
+
+table{
+  display: block;
+  height: 300px;
+  overflow: auto
+}
+
+tr {
+  display:flex;
+  align-items:center;
+  height:50px;
+}
+// td{
+//   position: sticky;
+//   top: 0
+// }
+
+.trash{
+  float: right;
+}
+
 footer {
   position: fixed;
   left: 0;
@@ -35,19 +59,4 @@ footer {
   background-color: $primary-color;
   color: white;
   text-align: center;
-}
-
-.check-box {
-  padding: 2%;
-}
-
-tr {
-  display:flex;
-  align-items:center;
-  height:50px;
-}
-
-.trash{
-  float: right;
-
 }
