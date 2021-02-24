@@ -1,7 +1,7 @@
 import { stringify } from "@angular/compiler/src/util";
 
 export class Model {
-  title:any;
+  title:string;
   items:any;
 
   constructor() {
@@ -16,10 +16,10 @@ export class Model {
 }
 
 export class TodoItem {
-  description:boolean;
-  action:any;
+  description:any;
+  action:boolean;
 
-  constructor(description:any, action:any) {
+  constructor(description:any, action:boolean) {
     this.description= description;
     this.action=action;
   }

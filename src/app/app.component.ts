@@ -21,7 +21,7 @@ export class AppComponent {
 
   addItem(value:any){
     if(value!=""){
-      //not completed task so added false in line 26
+      //not completed task so added false in line 25
       this.model.items.push(new TodoItem(value,false))
     }
   }

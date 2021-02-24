@@ -1,6 +1,6 @@
 <!-- NAV BAR -->
 <mat-toolbar class="navbar">
-  <div>MY LIST</div>
+  <div>MY TODO LIST</div>
   <div>
     <span> Remind Me!</span>
   </div>
@@ -39,7 +39,9 @@
           </td>
           <!-- <td> <input type="checkbox" [(ngModel)]="item.action"></td>
           <td>{{item.description}}</td> -->
-          <mat-icon color="accent" class="trash">delete</mat-icon>
+          <!-- CHANGE DESIGN  -->
+          <button (click)="(addItem(todoText.value)) ; todoText.value ='';"> <mat-icon color="accent" class="trash">delete</mat-icon></button>
+          <!-- <mat-icon color="accent" class="trash">delete</mat-icon> -->
         </tr>
       </tbody>
     </table>
