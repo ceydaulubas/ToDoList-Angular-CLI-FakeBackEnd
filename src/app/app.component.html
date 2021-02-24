@@ -11,7 +11,7 @@
     <div class="search">
 
 
-      <mat-form-field appearance="fill" style="width:300px;">
+      <mat-form-field appearance="fill" style="width:300px;" color="accent" >
         <mat-label >Add ToDo</mat-label> <input matInput #todoText >
       </mat-form-field>
 
@@ -25,7 +25,7 @@
       <!-- <input mat-checkbox class="example-margin" type="checkbox" [(ngModel)]="isDisplay" name="" id="displayAll">
       <label for="displayAll">Display All</label> -->
 
-       <mat-checkbox color="primary" [(ngModel)]="isDisplay" name="" id="displayAll">
+       <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
       <label for="displayAll">Display All</label>
     </mat-checkbox>
     </div>
@@ -36,7 +36,7 @@
           <td>{{i+1}}</td>
 
           <td>
-          <mat-checkbox color="primary" [(ngModel)]="item.action" name="" class="check-box" >
+          <mat-checkbox color="accent" [(ngModel)]="item.action" name="" class="check-box" >
             <td>{{item.description}}</td>
           </mat-checkbox>
           </td>
@@ -44,7 +44,7 @@
           <!-- <td> <input type="checkbox" [(ngModel)]="item.action"></td>
           <td>{{item.description}}</td> -->
 
-          <mat-icon color="primary" class="trash">delete</mat-icon>
+          <mat-icon color="accent" class="trash">delete</mat-icon>
         </tr>
       </tbody>
     </table>
