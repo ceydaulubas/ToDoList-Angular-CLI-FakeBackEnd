@@ -15,40 +15,42 @@ $primary-color: rgb(9, 6, 185);
   width: 50%;
   text-align: center;
   border: 5px solid #817681;
-  padding: 10px;
+  padding: 1.7rem;
   position: fixed;
-  top: 35%;
+  top: 45%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
 
-button {
-  margin-left: 1rem;
+.search{
+  .todo-input {
+    width: 90%;
+    max-width: 500px;
+  }
+  button {
+    margin-left: 1rem;
+    // font-size: .90rem;
+  }
 }
 
+table {
+  display: block;
+  height: 250px;
+  overflow: auto;
+  width: 100%;
+
+tr {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
 .check-box {
   padding: 2%;
 }
-
-table{
-  display: block;
-  height: 250px;
-  overflow: auto
-}
-
-tr {
-  display:flex;
-  align-items:center;
-  height:50px;
-}
-// td{
-//   position: sticky;
-//   top: 0
-// }
-
-.trash{
+.trash {
   float: right;
+}
 }
 
 footer {

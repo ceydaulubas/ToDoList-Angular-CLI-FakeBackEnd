@@ -1,3 +1,4 @@
+<!-- NAV BAR -->
 <mat-toolbar class="navbar">
   <div>MY LIST</div>
   <div>
@@ -5,51 +6,46 @@
   </div>
 </mat-toolbar>
 
-<div class="main">
-  <div ng-app="myShoppingList" ng-controller="myCtrl">
-    <h1>To Do List</h1>
-    <div class="search">
+<div class="main" ng-app="myShoppingList" ng-controller="myCtrl">
+  <h1>To Do List</h1>
 
+  <div class="search">
+    <mat-form-field class="todo-input" appearance="fill" color="accent" >
+      <mat-label>Add ToDo</mat-label>
+      <input matInput #todoText>
+    </mat-form-field>
+    <!-- <input type="text" #todoText placeholder="Add ToDo" style="width:300px;"> -->
+    <button class="addbutton" mat-raised-button color="accent"
+      (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button>
+  </div>
 
-      <mat-form-field appearance="fill" style="width:300px;" color="accent" >
-        <mat-label >Add ToDo</mat-label> <input matInput #todoText >
-      </mat-form-field>
-
-      <!-- <input type="text" #todoText placeholder="Add ToDo" style="width:300px;"> -->
-
-      <button mat-raised-button color="accent" class="addbutton"
-        (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button>
-    </div>
-
-    <div>
-      <!-- <input mat-checkbox class="example-margin" type="checkbox" [(ngModel)]="isDisplay" name="" id="displayAll">
+  <div>
+    <!-- <input mat-checkbox class="example-margin" type="checkbox" [(ngModel)]="isDisplay" name="" id="displayAll">
       <label for="displayAll">Display All</label> -->
-
-       <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
+    <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
       <label for="displayAll">Display All</label>
     </mat-checkbox>
-    </div>
+  </div>
 
+  <div>
     <table>
       <tbody>
         <tr *ngFor="let item of getItems() ; let i= index">
           <td>{{i+1}}</td>
-
           <td>
-          <mat-checkbox color="accent" [(ngModel)]="item.action" name="" class="check-box" >
-            <td>{{item.description}}</td>
+            <mat-checkbox color="accent" [(ngModel)]="item.action" name="" class="check-box">
+          <td>{{item.description}}</td>
           </mat-checkbox>
           </td>
-
           <!-- <td> <input type="checkbox" [(ngModel)]="item.action"></td>
           <td>{{item.description}}</td> -->
-
           <mat-icon color="accent" class="trash">delete</mat-icon>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
 <footer>
   This web page created by Ceyda Ulubas.
 </footer>
