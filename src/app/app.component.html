@@ -1,53 +1,15 @@
+
+<h2>Todo</h2>
+<div *ngFor="let todo of todoitems$ | async">
+  <h3>{{todo.id}}</h3>
+  <p>{{todo.task}}</p>
+</div>
+
+
 <!-- NAV BAR -->
-<mat-toolbar class="navbar">
+<!-- <mat-toolbar class="navbar">
   <div>MY TODO LIST</div>
   <div>
     <span> Remind Me!</span>
   </div>
-</mat-toolbar>
-
-<div class="main" ng-app="myShoppingList" ng-controller="myCtrl">
-  <h1>To Do List</h1>
-
-  <div class="search">
-    <mat-form-field class="todo-input" appearance="fill" color="accent" >
-      <mat-label>Add ToDo</mat-label>
-      <input matInput #todoText>
-    </mat-form-field>
-    <!-- <input type="text" #todoText placeholder="Add ToDo" style="width:300px;"> -->
-    <button class="addbutton" mat-raised-button color="accent"
-      (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button>
-  </div>
-
-  <div>
-    <!-- <input mat-checkbox class="example-margin" type="checkbox" [(ngModel)]="isDisplay" name="" id="displayAll">
-      <label for="displayAll">Display All</label> -->
-    <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
-      <label for="displayAll">Display All</label>
-    </mat-checkbox>
-  </div>
-
-  <div>
-    <table>
-      <tbody>
-        <tr *ngFor="let item of getItems() ; let i= index">
-          <td>{{i+1}}</td>
-          <td>
-            <mat-checkbox color="accent" [(ngModel)]="item.action" name="" class="check-box">
-          <td>{{item.description}}</td>
-          </mat-checkbox>
-          </td>
-          <!-- <td> <input type="checkbox" [(ngModel)]="item.action"></td>
-          <td>{{item.description}}</td> -->
-          <!-- CHANGE DESIGN  -->
-          <button (click)="(addItem(todoText.value)) ; todoText.value ='';"> <mat-icon color="accent" class="trash">delete</mat-icon></button>
-          <!-- <mat-icon color="accent" class="trash">delete</mat-icon> -->
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<footer>
-  This web page created by Ceyda Ulubas.
-</footer>
+</mat-toolbar> -->

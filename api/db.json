@@ -1,0 +1,34 @@
+{
+  "todoitems": [
+    {
+      "id": "1",
+      "task": "study angular",
+      "isDone": "yes"
+    },
+    {
+      "id": "2",
+      "task": "read book",
+      "isDone": "no"
+    },
+    {
+      "id": "3",
+      "task": "write daily",
+      "isDone": "no"
+    },
+    {
+      "id": "4",
+      "task": "play PS5",
+      "isDone": "yes"
+    },
+    {
+      "id": "12",
+      "task": "read tutorial",
+      "isDone": "no"
+    },
+    {
+      "id": "13",
+      "task": "arigato",
+      "isDone": "no"
+    }
+  ]
+}
