@@ -1,26 +1,27 @@
 import { stringify } from "@angular/compiler/src/util";
 
 export class Model {
-  title:string;
   items:any;
 
   constructor() {
-    this.title = 'TO DO LIST';
+
     this.items = [
-      new TodoItem("study angular", true),
-      new TodoItem("read book", false),
-      new TodoItem("write daily", false),
-      new TodoItem("play PS5", true)
+      new TodoItem("12","study angular", "no"),
+      new TodoItem("13","read book", "no"),
+      new TodoItem("14","write daily", "no"),
+      new TodoItem("15","play PS5", "no")
     ]
   }
 }
 
 export class TodoItem {
-  description:any;
-  action:boolean;
+  id:string;
+  task:string;
+  isDone:string;
 
-  constructor(description:any, action:boolean) {
-    this.description= description;
-    this.action=action;
+  constructor(id:string,task:string, isDone:string) {
+    this.id= id;
+    this.task= task;
+    this.isDone=isDone;
   }
 }
