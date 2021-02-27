@@ -1,9 +1,9 @@
 {
   "todoitems": [
     {
-      "id": "7930fecf-e6b1-43c8-860e-a55526e1b2f7",
-      "task": "Write daily",
-      "isDone": "no"
+      "task": "write",
+      "isDone": false,
+      "id": "1df84dc1-2957-4313-81a0-55c1374270b4"
     }
   ]
 }

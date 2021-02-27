@@ -22,7 +22,7 @@
           <tr *ngFor='let item of todoitems$ | async ; let i= index '>
             <td> {{i+1}}</td>
             <td>
-              <mat-checkbox color="accent" [(ngModel)]="item.task" name="" class="check-box">
+              <mat-checkbox (click)="(changeIsDone(item.id, item.task, item.isDone))" color="accent" [(ngModel)]="item.isDone" name="" class="check-box" >
             <td>{{item.task}}</td>
             </mat-checkbox>
             </td>

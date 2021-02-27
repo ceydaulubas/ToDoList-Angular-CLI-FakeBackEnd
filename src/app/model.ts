@@ -5,7 +5,6 @@ export class Model {
 
   constructor() {
     this.items = [
-      new TodoItem("12","study angular", "no"),
     ]
   }
 }
@@ -13,9 +12,9 @@ export class Model {
 export class TodoItem {
   id:string;
   task:string;
-  isDone:string;
+  isDone:boolean;
 
-  constructor(id:string,task:string, isDone:string) {
+  constructor(id:string,task:string, isDone:boolean) {
     this.id= id;
     this.task= task;
     this.isDone=isDone;

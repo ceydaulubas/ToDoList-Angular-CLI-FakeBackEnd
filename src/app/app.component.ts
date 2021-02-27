@@ -27,7 +27,7 @@ export class AppComponent {
   addTodoItem(task: string) {
     var adress = "/api/todoitems/";
     const myId = uuid.v4();
-    this.http.post<any>(adress ,{ id:myId , task:task, isDone: "no" })
+    this.http.post<any>(adress ,{ id:myId , task:task, isDone: false })
       .subscribe(
         (val) => {
           console.log("ADD call successful value returned in body", val);
@@ -42,7 +42,6 @@ export class AppComponent {
           window.location.reload();
         });
   }
-
 
   /* DELETE todoitem id*/
 
@@ -63,5 +62,26 @@ export class AppComponent {
           window.location.reload();
         });
   }
+
+  /* CHANGE isDone status*/
+
+changeIsDone(id: string, task:string, isDone:boolean ){
+
+  var adress = "/api/todoitems/";
+  this.http.put(adress + id,{task:task, isDone:!isDone})
+  .subscribe(
+    (val) => {
+      console.log("PUT call successful value returned in body", val)
+      window.location.reload();
+    },
+    response => {
+      console.log("PUT call in error", response)
+      window.location.reload();
+    },
+    () => {
+      console.log("The PUT observable is now completed.")
+      window.location.reload();
+    });
+}
 
 }
