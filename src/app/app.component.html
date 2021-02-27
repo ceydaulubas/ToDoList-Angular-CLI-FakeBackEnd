@@ -7,8 +7,7 @@
       <input matInput #todoText>
     </mat-form-field>
 
-  <!-- <button class="addbutton" mat-raised-button color="accent"
-        (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button> -->
+  <!--   -->
     </div>
 
     <div class="tableclass">
@@ -28,8 +27,8 @@
             </mat-checkbox>
             </td>
             <td>
-              <button class="icon-button" (click)="(deleteTodoItem());">
-                <mat-icon color="accent" class="trash" >delete</mat-icon>
+              <button class="icon-button" (click)="(deleteTodoItem(item.id))">
+                <mat-icon color="warn" class="trash" >delete</mat-icon>
               </button>
             </td>
           </tr>

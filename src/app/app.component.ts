@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { Model, TodoItem } from './model';
 
 
-import { Observable } from 'rxjs';
+import { fromEvent, Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent  {
+export class AppComponent {
 
   constructor(private http: HttpClient) {
   }
@@ -23,20 +23,33 @@ export class AppComponent  {
 
   /* ADD todoitems */
 
-  addItem(value: any) {
-    if (value != "") {
-      console.log("false")
-    }
-  }
+  // addItem(value: any) {
+  //   if (value != "") {
+  //     console.log("false")
+  //   }
+  // }
+
+//   addTodoItem() {
+//     this.http.post<any>("/api/todoitems/id", { id:"", task:"", isDone:"" }).subscribe({
+//         next: data => {
+//             this.postId = data.id;
+//         },
+//         // error: error => {
+//         //     this.errorMessage = error.message;
+//         //     console.error('There was an error!', error);
+//         // }
+//     })
+// }
+
 
   /* DELETE todoitem id*/
 
-  deleteTodoItem() {
-    this.http.delete("/api/todoitems/317")
+  deleteTodoItem(id: string) {
+    var adress= "/api/todoitems/";
+    this.http.delete( adress+id)
     .subscribe(
         (val) => {
-            console.log("DELETE call successful value returned in body",
-                        val);
+            console.log("DELETE call successful value returned in body", val);
         },
         response => {
             console.log("DELETE call in error", response);
@@ -47,4 +60,3 @@ export class AppComponent  {
 }
 
 }
-
