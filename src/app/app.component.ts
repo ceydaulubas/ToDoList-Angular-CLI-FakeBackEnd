@@ -3,8 +3,9 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Model, TodoItem } from './model';
 
-
 import { fromEvent, Observable } from 'rxjs';
+
+import * as uuid from 'uuid';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,19 +24,20 @@ export class AppComponent {
 
   /* ADD todoitems */
 
-  addTodoItem(id: string) {
-    // var adress = "/api/todoitems/";
-    // this.http.post(adress + { id: "", task: "", isDone: "" } )
-    //   .subscribe(
-    //     (val) => {
-    //       console.log("DELETE call successful value returned in body", val);
-    //     },
-    //     response => {
-    //       console.log("DELETE call in error", response);
-    //     },
-    //     () => {
-    //       console.log("The DELETE observable is now completed.");
-    //     });
+  addTodoItem(task: string) {
+    var adress = "/api/todoitems/";
+    const myId = uuid.v4();
+    this.http.post<any>(adress ,{ id:myId , task: "a", isDone: "no" })
+      .subscribe(
+        (val) => {
+          console.log("ADD call successful value returned in body", val);
+        },
+        response => {
+          console.log("ADD call in error", response);
+        },
+        () => {
+          console.log("The ADD observable is now completed.");
+        });
 
     // this.http.post<any>("/api/todoitems/", { id: "", task: "", isDone: "" }).subscribe({
     //   next: data => {
