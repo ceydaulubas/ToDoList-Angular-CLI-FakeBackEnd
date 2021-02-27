@@ -27,27 +27,20 @@ export class AppComponent {
   addTodoItem(task: string) {
     var adress = "/api/todoitems/";
     const myId = uuid.v4();
-    this.http.post<any>(adress ,{ id:myId , task: "a", isDone: "no" })
+    this.http.post<any>(adress ,{ id:myId , task:task, isDone: "no" })
       .subscribe(
         (val) => {
           console.log("ADD call successful value returned in body", val);
+          window.location.reload();
         },
         response => {
           console.log("ADD call in error", response);
+          window.location.reload();
         },
         () => {
           console.log("The ADD observable is now completed.");
+          window.location.reload();
         });
-
-    // this.http.post<any>("/api/todoitems/", { id: "", task: "", isDone: "" }).subscribe({
-    //   next: data => {
-    //     this.postId = data.id;
-    //   },
-    //   error: error => {
-    //       this.errorMessage = error.message;
-    //       console.error('There was an error!', error);
-    //   }
-    // })
   }
 
 

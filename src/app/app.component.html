@@ -4,10 +4,10 @@
   <div class="search">
     <mat-form-field class="addtodo-input" appearance="fill" color="accent">
       <mat-label>Add ToDo</mat-label>
-      <input matInput #todoText>
+      <input matInput #todoText >
     </mat-form-field>
     <button class="addbutton" mat-raised-button color="accent"
-        (click)="( addTodoItem('abc'))"> ADD </button>
+        (click)="( addTodoItem(todoText.value))"> ADD </button>
     </div>
 
     <div class="tableclass">
