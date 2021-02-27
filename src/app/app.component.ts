@@ -23,40 +23,50 @@ export class AppComponent {
 
   /* ADD todoitems */
 
-  // addItem(value: any) {
-  //   if (value != "") {
-  //     console.log("false")
-  //   }
-  // }
+  addTodoItem(id: string) {
+    // var adress = "/api/todoitems/";
+    // this.http.post(adress + { id: "", task: "", isDone: "" } )
+    //   .subscribe(
+    //     (val) => {
+    //       console.log("DELETE call successful value returned in body", val);
+    //     },
+    //     response => {
+    //       console.log("DELETE call in error", response);
+    //     },
+    //     () => {
+    //       console.log("The DELETE observable is now completed.");
+    //     });
 
-//   addTodoItem() {
-//     this.http.post<any>("/api/todoitems/id", { id:"", task:"", isDone:"" }).subscribe({
-//         next: data => {
-//             this.postId = data.id;
-//         },
-//         // error: error => {
-//         //     this.errorMessage = error.message;
-//         //     console.error('There was an error!', error);
-//         // }
-//     })
-// }
+    // this.http.post<any>("/api/todoitems/", { id: "", task: "", isDone: "" }).subscribe({
+    //   next: data => {
+    //     this.postId = data.id;
+    //   },
+    //   error: error => {
+    //       this.errorMessage = error.message;
+    //       console.error('There was an error!', error);
+    //   }
+    // })
+  }
 
 
   /* DELETE todoitem id*/
 
   deleteTodoItem(id: string) {
-    var adress= "/api/todoitems/";
-    this.http.delete( adress+id)
-    .subscribe(
+    var adress = "/api/todoitems/";
+    this.http.delete(adress + id)
+      .subscribe(
         (val) => {
-            console.log("DELETE call successful value returned in body", val);
+          console.log("DELETE call successful value returned in body", val)
+          window.location.reload();
         },
         response => {
-            console.log("DELETE call in error", response);
+          console.log("DELETE call in error", response)
+          window.location.reload();
         },
         () => {
-            console.log("The DELETE observable is now completed.");
+          console.log("The DELETE observable is now completed.")
+          window.location.reload();
         });
-}
+  }
 
 }
