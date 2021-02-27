@@ -1,49 +1,52 @@
-$primary-color: rgba(10, 44, 117, 0.5);
-
-.navbar {
-  justify-content: space-between;
-  margin-bottom: 2%;
-  background-color: $primary-color;
-  // span {
-  //   padding-right: 1rem;
-  // }
-}
+$white: white;
+$footer-color: rgba(10, 44, 117, 0.5);
+$table-color:rgba(5, 14, 68, 0.856);
 
 .main {
-  background-color: rgba(5, 14, 68, 0.856);
-  color: white;
+  background-color:$table-color;
+  color:$white;
   width: 50%;
   text-align: center;
   border: 5px solid #817681;
   padding: 1.7rem;
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  margin:5% auto;
+}
+
+@media (max-width: 630px) {
+  h1 {
+      font-size: 20px;
+  }
 }
 
 .search{
-  .todo-input {
-    width: 90%;
-    max-width: 500px;
-
+  .addtodo-input {
+    width: 70%;
   }
-  button {
+  .mat-raised-button{
     margin-left: 1rem;
-    // font-size: .90rem;
+    @media screen
+    and (min-width: 200px)
+    and (max-width: 1000px) {
+      height: 30px;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
   }
+
 }
 
 .all-check-box{
   float: left;
   font-size: 1.1rem;
   padding: 2%;
+@media (max-width: 400px) {
+  font-size: 15px;
+}
 }
 
 .tableclass{
-background-color: rgba(245, 245, 220, 0.171);
-color: rgb(247, 243, 243);
+background-color: rgba(248, 248, 248, 0.089);
+color: $white;
 margin: 1%;
 padding: 2%;
 }
@@ -55,11 +58,11 @@ table {
   width: 100%;
   // min-width: 5rem;
   table-layout: fixed;
-
   @media screen
   and (min-width: 300px)
   and (max-width: 1000px) {
     margin: 2% ;
+    font-size: 13px;
   }
 
 tr {
@@ -70,16 +73,15 @@ tr {
 .check-box{
   padding: 2%;
 }
-.trash {
-  float: right;
-}
 
 .icon-button{
   background-color:rgba(205, 208, 224, 0);
-  position: fixed;
-  right: 0;
-  margin-right: 10%;
-
+  // position: fixed;
+  // right: 0;
+  // margin-right: 10%;
+  // .trash {
+  //   float: right;
+  // }
 }
 }
 
@@ -88,7 +90,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: $primary-color;
-  color: white;
+  background-color:$footer-color;
+  color: $white;
   text-align: center;
 }
+

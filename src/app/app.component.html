@@ -1,59 +1,41 @@
-<!--
-<h2>Todo</h2>
-<div *ngFor="let todo of getItems() | async">
-  <h3>{{todo.id}}</h3>
-  <p>{{todo.task}}</p>
-</div>
- -->
-
-
-<div class="main" ng-app="myShoppingList" ng-controller="myCtrl">
+<div class="main">
   <h1><b>To Do List</b></h1>
 
   <div class="search">
-    <mat-form-field class="todo-input" appearance="fill" color="accent" >
+    <mat-form-field class="addtodo-input" appearance="fill" color="accent">
       <mat-label>Add ToDo</mat-label>
       <input matInput #todoText>
     </mat-form-field>
-    <!-- <input type="text" #todoText placeholder="Add ToDo" style="width:300px;"> -->
-    <button class="addbutton" mat-raised-button color="accent"
-      (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button>
-  </div>
 
-  <div class="tableclass">
-  <div class="all-check-box">
-    <!-- <input mat-checkbox class="example-margin" type="checkbox" [(ngModel)]="isDisplay" name="" id="displayAll">
-      <label for="displayAll">Display All</label> -->
-    <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
-      <label for="displayAll"><b>Display All</b></label>
-    </mat-checkbox>
-  </div>
+  <!-- <button class="addbutton" mat-raised-button color="accent"
+        (click)="(addItem(todoText.value)) ; todoText.value ='';"> ADD </button> -->
+    </div>
 
+    <div class="tableclass">
+    <!-- <div class="all-check-box">
+      <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
+        <label for="displayAll"><b>Display All</b></label>
+      </mat-checkbox>
+    </div> -->
 
-    <table>
-      <tbody >
-        <tr *ngFor='let item of getItems() | async' >
-          <td> {{item.id}}</td>
-
-
-        <!-- <tr *ngFor="let item of getItems() ; let i= index"> -->
-          <!-- <td>{{i+1}}</td> -->
-          <td>
-            <mat-checkbox color="accent" [(ngModel)]="item.task" name="" class="check-box">
-          <td>{{item.task}}</td>
-          </mat-checkbox>
-          </td>
-          <!-- <td> <input type="checkbox" [(ngModel)]="item.action"></td>
-          <td>{{item.description}}</td> -->
-          <!-- CHANGE DESIGN  -->
-          <td>
-            <button class="icon-button" (click)="(addItem(todoText.value)) ; todoText.value ='';" > <mat-icon color="accent" class="trash">delete</mat-icon></button>
-          </td>
-          <!-- <mat-icon color="accent" class="trash">delete</mat-icon> -->
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <table>
+        <tbody>
+          <tr *ngFor='let item of todoitems$ | async ; let i= index '>
+            <td> {{i+1}}</td>
+            <td>
+              <mat-checkbox color="accent" [(ngModel)]="item.task" name="" class="check-box">
+            <td>{{item.task}}</td>
+            </mat-checkbox>
+            </td>
+            <td>
+              <button class="icon-button" (click)="(deleteTodoItem());">
+                <mat-icon color="accent" class="trash" >delete</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 </div>
 
 <footer>

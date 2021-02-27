@@ -4,12 +4,8 @@ export class Model {
   items:any;
 
   constructor() {
-
     this.items = [
       new TodoItem("12","study angular", "no"),
-      new TodoItem("13","read book", "no"),
-      new TodoItem("14","write daily", "no"),
-      new TodoItem("15","play PS5", "no")
     ]
   }
 }

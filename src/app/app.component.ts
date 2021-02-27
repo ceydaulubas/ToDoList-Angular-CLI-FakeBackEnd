@@ -1,46 +1,50 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Model, TodoItem } from './model';
 
-import { Observable } from 'rxjs';
 
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent {
+export class AppComponent  {
 
-todoitems$ :Observable<any> = this.http.get('/api/todoitems');
   constructor(private http: HttpClient) {
   }
-
-
   model = new Model();
-  isDisplay=false;
+  isDisplay = false;
 
-  getItems(){
-    if (this.isDisplay){
-      return this.todoitems$ ;
-    }
-    return this.todoitems$ ;
-    //this.model.items.filter((item:any) => !item.action);
+  /* GET ALL todoitems*/
+  todoitems$: Observable<any> = this.http.get('/api/todoitems');
 
-  }
+  /* ADD todoitems */
 
-  addItem(value:any){
-    if(value!=""){
-      //not completed task so added false in line 25
+  addItem(value: any) {
+    if (value != "") {
       console.log("false")
-      this.http.post('/api/todoitems',value)
-
-      // this.model.items.push(new TodoItem(value.id,value.task,value.isDone))
     }
   }
 
-  // deleteItem(){
+  /* DELETE todoitem id*/
 
-  }
+  deleteTodoItem() {
+    this.http.delete("/api/todoitems/317")
+    .subscribe(
+        (val) => {
+            console.log("DELETE call successful value returned in body",
+                        val);
+        },
+        response => {
+            console.log("DELETE call in error", response);
+        },
+        () => {
+            console.log("The DELETE observable is now completed.");
+        });
+}
+
+}
 
