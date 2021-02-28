@@ -46,11 +46,11 @@ After that, for checking the mock back end part, you should write " npm run api 
 
 ## Resources
 
-Node: `https://nodejs.org/en/download/` <br />
-Angular & TypeScript : `https://www.youtube.com/watch?v=k5E2AVpwsko`<br />
-Angular CLI: `https://cli.angular.io/`<br />
-Angular Material: `https://material.angular.io/`, for button `https://material.angular.io/components/button/overview`<br />
-Mock Backend: `https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14`
+Node: https://nodejs.org/en/download/ <br />
+Angular & TypeScript : https://www.youtube.com/watch?v=k5E2AVpwsko<br />
+Angular CLI: https://cli.angular.io/<br />
+Angular Material: https://material.angular.io/, for button https://material.angular.io/components/button/overview <br />
+Mock Backend: https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14
 
 <!-- ## Blog
 
