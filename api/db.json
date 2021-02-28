@@ -1,9 +1,14 @@
 {
   "todoitems": [
     {
-      "task": "write",
-      "isDone": false,
-      "id": "1df84dc1-2957-4313-81a0-55c1374270b4"
+      "task": "Read Book",
+      "isDone": true,
+      "id": "f8ac0444-25e5-4fdc-a44f-dd78a25e8a9a"
+    },
+    {
+      "task": "Write Daily",
+      "isDone": true,
+      "id": "edf1f92d-2eef-47e9-bfaf-b55badd1b2d5"
     }
   ]
 }
