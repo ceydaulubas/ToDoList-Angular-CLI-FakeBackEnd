@@ -39,7 +39,7 @@ Step 6: Set up the HttpClientModule in `app.module.ts`.
 Step 7: Before the start GET/POST/PUT/DELETE request in code. To see if I have done the installation correctly, I checked it in postman.
 Finally, I added required request functions in `app.component` file and after integrated it with `app.component.html file`, it worked. 
 
-## Json server
+## Json server 
 
 After you clone or take this code to your local, firstly you should install npm in the terminal with an `npm install` statement. 
 After that, for checking the mock back end part, you should write " npm run api " in the terminal. At the same time, you should run `ng serve --open`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -50,7 +50,8 @@ Node: https://nodejs.org/en/download/ <br />
 Angular & TypeScript : https://www.youtube.com/watch?v=k5E2AVpwsko<br />
 Angular CLI: https://cli.angular.io/<br />
 Angular Material: https://material.angular.io/, for button https://material.angular.io/components/button/overview <br />
-Mock Backend: https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14
+Json Server Blog Post: https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14
+Json Server Github: https://github.com/typicode/json-server
 
 <!-- ## Blog
 
