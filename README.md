@@ -10,7 +10,7 @@ Moreover, this project support GET/POST/DELETE/PUT requests.
 
 ## Preparation 
 
-For using some tools inside of Angular CLI, I had to the highest version of Node. Therefore, firstly I had to upgrade my node so I installed the latest version of Node: 14.16.0 (includes npm 6.14.11). Later, I can installed ANGULAR CLI(version 11.2.1.).
+For using some tools inside of Angular CLI, I had to the highest version of Node. Therefore, firstly I had to upgrade my node so I installed the latest version of Node. Later, I can installed ANGULAR CLI(version 11.2.1.).
 
 `npm install -g @angular/cli` <br />
 `ng new todolist-angular` <br />
@@ -39,7 +39,7 @@ Step 6: Set up the HttpClientModule in `app.module.ts`.
 Step 7: Before the start GET/POST/PUT/DELETE request in code. To see if I have done the installation correctly, I checked it in postman.
 Finally, I added required request functions in `app.component` file and after integrated it with `app.component.html file`, it worked. 
 
-## Json server
+## Development server
 
 After you clone or take this code to your local, firstly you should install npm in the terminal with an `npm install` statement. 
 After that, for checking the mock back end part, you should write " npm run api " in the terminal. At the same time, you should run `ng serve --open`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
