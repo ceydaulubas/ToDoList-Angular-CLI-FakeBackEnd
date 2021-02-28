@@ -11,6 +11,12 @@
     </div>
 
     <div class="tableclass">
+    <div class="all-check-box">
+      <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
+        <label for="displayAll"><b>Display All</b></label>
+      </mat-checkbox>
+    </div>
+
       <table>
         <tbody>
           <tr *ngFor='let item of todoitems$ | async ; let i= index '>
