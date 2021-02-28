@@ -1,28 +1,13 @@
 {
   "todoitems": [
     {
-      "id": "9fe949fb-4b1d-4deb-a916-a4b494aac14d",
       "task": "Read Book",
-      "isDone": false
+      "isDone": false,
+      "id": "f8ac0444-25e5-4fdc-a44f-dd78a25e8a9a"
     },
     {
-      "id": "3a3e0635-3eef-422c-8c96-5e4298e364ce",
-      "task": "Practice Yoga",
-      "isDone": false
-    },
-    {
-      "id": "5cf8f07f-cb39-410b-9520-56a2dc1827e1",
-      "task": "Study Angular ",
-      "isDone": false
-    },
-    {
-      "id": "680704e0-7e9a-4d73-a8b8-a09635bf4b39",
-      "task": "Create a new project",
-      "isDone": false
-    },
-    {
-      "id": "ay-CCho",
-      "task": "Read tutorial",
+      "id": "3112b814-9a2b-4b23-b03b-34f5cb71ec36",
+      "task": "Cook a Meal",
       "isDone": false
     }
   ]

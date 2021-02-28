@@ -13,7 +13,6 @@ import * as uuid from 'uuid';
 })
 
 export class AppComponent {
-  title = 'todolist-angular';
 
   constructor(private http: HttpClient) {
   }
