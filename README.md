@@ -12,11 +12,11 @@ Moreover, this project support GET/POST/DELETE/PUT requests.
 
 For using some tools inside of Angular CLI, I had to the highest version of Node. Therefore, firstly I had to upgrade my node so I installed the latest version of Node. Later, I can installed ANGULAR CLI(version 11.2.1.).
 
-`npm install -g @angular/cli`
-`ng new todolist-angular`
-`cd my-dream-app`
-`code .`
-`ng serve`
+`npm install -g @angular/cli` <br />
+`ng new todolist-angular` <br />
+`cd my-dream-app` <br />
+`code .` <br />
+`ng serve` <br />
 
 I started with creating an HTML page and using Angular Material. For Angular Material, I created a " material/material.module.ts " file for importing necessary tools.
 Step1: ng add @angular/material
@@ -46,10 +46,10 @@ After that, for checking the mock back end part, you should write " npm run api 
 
 ## Resources
 
-Node: `https://nodejs.org/en/download/`
-Angular & TypeScript : `https://www.youtube.com/watch?v=k5E2AVpwsko`
-Angular CLI: `https://cli.angular.io/`
-Angular Material: `https://material.angular.io/`, for button `https://material.angular.io/components/button/overview`
+Node: `https://nodejs.org/en/download/` <br />
+Angular & TypeScript : `https://www.youtube.com/watch?v=k5E2AVpwsko`<br />
+Angular CLI: `https://cli.angular.io/`<br />
+Angular Material: `https://material.angular.io/`, for button `https://material.angular.io/components/button/overview`<br />
 Mock Backend: `https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14`
 
 <!-- ## Blog
