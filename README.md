@@ -55,5 +55,5 @@ Json Server Github: https://github.com/typicode/json-server
 
 ## Blog
 
-Here is my blog about the project. https://ceydaulubas.medium.com/todo-list-in-angular-cli-1d3ef2b0ea2a
+Here is my blog post about the project. https://ceydaulubas.medium.com/todo-list-in-angular-cli-1d3ef2b0ea2a
 
