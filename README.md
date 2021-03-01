@@ -30,19 +30,19 @@ Configuration of Mock API:
 
 For using mack api, I should have JSON file for keeping my data. Therefore, I follow tutorial that I shared link below. 
 
-Step 1: `npm install -g json-server`
-Step 2: Add a Json file with mock data.
-Step 3: Create a route mapping file. (`api/routes.json`)
-Step 4: Add ` "api": "json-server api/db.json --routes api/routes.json --no-cors=true" ` to package.json file.
-Step 5: Starting mock api run `npm run api` in terminal. / The other option is `json-server --watch db.json`. (Access to data from browser (`http://localhost:3000/todoitems`)).
-Step 6: Set up the HttpClientModule in `app.module.ts`. 
-Step 7: Before the start GET/POST/PUT/DELETE request in code. To see if I have done the installation correctly, I checked it in postman.
+Step 1: `npm install -g json-server` <br />
+Step 2: Add a Json file with mock data. <br />
+Step 3: Create a route mapping file. (`api/routes.json`) <br />
+Step 4: Add ` "api": "json-server api/db.json --routes api/routes.json --no-cors=true" ` to package.json file. <br />
+Step 5: Starting mock api run `npm run api` in terminal. / The other option is `json-server --watch db.json`. (Access to data from browser (`http://localhost:3000/todoitems`)). <br />
+Step 6: Set up the HttpClientModule in `app.module.ts`. <br />
+Step 7: Before the start GET/POST/PUT/DELETE request in code. To see if I have done the installation correctly, I checked it in postman.<br />
 Finally, I added required request functions in `app.component` file and after integrated it with `app.component.html file`, it worked. 
 
 ## Json server 
 
 After you clone or take this code to your local, firstly you should install npm in the terminal with an `npm install` statement. 
-After that, for checking the mock back end part, you should write " npm run api " in the terminal. At the same time, you should run `ng serve --open`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After that, for checking the mock back end part, you should write `npm run api` in the terminal. At the same time, you should run `ng serve --open`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Resources
 
