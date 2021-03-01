@@ -50,9 +50,10 @@ Node: https://nodejs.org/en/download/ <br />
 Angular & TypeScript : https://www.youtube.com/watch?v=k5E2AVpwsko<br />
 Angular CLI: https://cli.angular.io/<br />
 Angular Material: https://material.angular.io/, for button https://material.angular.io/components/button/overview <br />
-Json Server Blog Post: https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14
+Json Server Blog Post: https://blog.angulartraining.com/fake-your-angular-backend-until-you-make-it-8d145f713e14 <br />
 Json Server Github: https://github.com/typicode/json-server
 
-<!-- ## Blog
+## Blog
 
-Here is my blog about the project.  -->
+Here is my blog about the project. https://ceydaulubas.medium.com/todo-list-in-angular-cli-1d3ef2b0ea2a
+

@@ -1,54 +1,51 @@
 $white: white;
 $footer-color: rgba(10, 44, 117, 0.5);
-$table-color:rgba(5, 14, 68, 0.856);
+$table-color: rgba(5, 14, 68, 0.856);
 
 .main {
-  background-color:$table-color;
-  color:$white;
+  background-color: $table-color;
+  color: $white;
   width: 50%;
   text-align: center;
   border: 5px solid #817681;
   padding: 1.7rem;
-  margin:5% auto;
-}
+  margin: 5% auto;
 
 @media (max-width: 630px) {
   h1 {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
+}
 
-.search{
+.search {
   .addtodo-input {
     width: 70%;
   }
-  .mat-raised-button{
+  .mat-raised-button {
     margin-left: 1rem;
-    @media screen
-    and (min-width: 200px)
-    and (max-width: 1000px) {
+    @media screen and (min-width: 200px) and (max-width: 1000px) {
       height: 30px;
       font-size: 13px;
       margin-bottom: 5px;
     }
   }
-
 }
 
-.all-check-box{
+.all-check-box {
   float: left;
   font-size: 1.1rem;
   padding: 2%;
-@media (max-width: 400px) {
-  font-size: 15px;
-}
+  @media (max-width: 400px) {
+    font-size: 15px;
+  }
 }
 
-.tableclass{
-background-color: rgba(248, 248, 248, 0.089);
-color: $white;
-margin: 1%;
-padding: 2%;
+.tableclass {
+  background-color: rgba(248, 248, 248, 0.089);
+  color: $white;
+  margin: 1%;
+  padding: 2%;
 }
 
 table {
@@ -56,33 +53,30 @@ table {
   height: 250px;
   overflow: auto;
   width: 100%;
-  // min-width: 5rem;
   table-layout: fixed;
-  @media screen
-  and (min-width: 300px)
-  and (max-width: 1000px) {
-    margin: 2% ;
+  @media screen and (min-width: 300px) and (max-width: 1000px) {
+    margin: 2%;
     font-size: 13px;
   }
 
-tr {
-  display: flex;
-  align-items: center;
-  height: 50px;
-}
-.check-box{
-  padding: 2%;
-}
+  tr {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .check-box {
+    padding: 2%;
+  }
 
-.icon-button{
-  background-color:rgba(205, 208, 224, 0);
-  // position: fixed;
-  // right: 0;
-  // margin-right: 10%;
-  // .trash {
-  //   float: right;
-  // }
-}
+  .icon-button {
+    background-color: rgba(205, 208, 224, 0);
+    // position: fixed;
+    // right: 0;
+    // margin-right: 30%;
+    // .trash {
+    //   float: right;
+    // }
+  }
 }
 
 footer {
@@ -90,8 +84,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color:$footer-color;
+  background-color: $footer-color;
   color: $white;
   text-align: center;
 }
-

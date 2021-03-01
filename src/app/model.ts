@@ -1,7 +1,7 @@
 import { stringify } from "@angular/compiler/src/util";
 
 export class Model {
-  items:any;
+  items: any;
 
   constructor() {
     this.items = [
@@ -10,13 +10,13 @@ export class Model {
 }
 
 export class TodoItem {
-  id:string;
-  task:string;
-  isDone:boolean;
+  id: string;
+  task: string;
+  isDone: boolean;
 
-  constructor(id:string,task:string, isDone:boolean) {
-    this.id= id;
-    this.task= task;
-    this.isDone=isDone;
+  constructor(id: string, task: string, isDone: boolean) {
+    this.id = id;
+    this.task = task;
+    this.isDone = isDone;
   }
 }

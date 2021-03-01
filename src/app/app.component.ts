@@ -1,5 +1,5 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Model, TodoItem } from './model';
 
@@ -23,11 +23,10 @@ export class AppComponent {
   todoitems$: Observable<any> = this.http.get('/api/todoitems');
 
   /* ADD todoitems */
-
   addTodoItem(task: string) {
     var adress = "/api/todoitems/";
     const myId = uuid.v4();
-    this.http.post<any>(adress ,{ id:myId , task:task, isDone: false })
+    this.http.post<any>(adress, { id: myId, task: task, isDone: false })
       .subscribe(
         (val) => {
           console.log("ADD call successful value returned in body", val);
@@ -44,7 +43,6 @@ export class AppComponent {
   }
 
   /* DELETE todoitem id*/
-
   deleteTodoItem(id: string) {
     var adress = "/api/todoitems/";
     this.http.delete(adress + id)
@@ -65,23 +63,23 @@ export class AppComponent {
 
   /* CHANGE isDone status*/
 
-changeIsDone(id: string, task:string, isDone:boolean ){
+  changeIsDone(id: string, task: string, isDone: boolean) {
 
-  var adress = "/api/todoitems/";
-  this.http.put(adress + id,{task:task, isDone:!isDone})
-  .subscribe(
-    (val) => {
-      console.log("PUT call successful value returned in body", val)
-      window.location.reload();
-    },
-    response => {
-      console.log("PUT call in error", response)
-      window.location.reload();
-    },
-    () => {
-      console.log("The PUT observable is now completed.")
-      window.location.reload();
-    });
-}
+    var adress = "/api/todoitems/";
+    this.http.put(adress + id, { task: task, isDone: !isDone })
+      .subscribe(
+        (val) => {
+          console.log("PUT call successful value returned in body", val)
+          window.location.reload();
+        },
+        response => {
+          console.log("PUT call in error", response)
+          window.location.reload();
+        },
+        () => {
+          console.log("The PUT observable is now completed.")
+          window.location.reload();
+        });
+  }
 
 }

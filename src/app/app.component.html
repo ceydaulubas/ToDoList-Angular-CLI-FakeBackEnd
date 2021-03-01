@@ -4,37 +4,37 @@
   <div class="search">
     <mat-form-field class="addtodo-input" appearance="fill" color="accent">
       <mat-label>Add ToDo</mat-label>
-      <input matInput #todoText >
+      <input matInput #todoText>
     </mat-form-field>
-    <button class="addbutton" mat-raised-button color="accent"
-        (click)="( addTodoItem(todoText.value))"> ADD </button>
-    </div>
+    <button class="addbutton" mat-raised-button color="accent" (click)="( addTodoItem(todoText.value))"> ADD </button>
+  </div>
 
-    <div class="tableclass">
+  <div class="tableclass">
     <!-- <div class="all-check-box">
       <mat-checkbox color="accent" [(ngModel)]="isDisplay" name="" id="displayAll">
         <label for="displayAll"><b>Display All</b></label>
       </mat-checkbox>
     </div> -->
 
-      <table>
-        <tbody>
-          <tr *ngFor='let item of todoitems$ | async ; let i= index '>
-            <td> {{i+1}}</td>
-            <td>
-              <mat-checkbox (click)="(changeIsDone(item.id, item.task, item.isDone))" color="accent" [(ngModel)]="item.isDone" name="" class="check-box" >
-            <td>{{item.task}}</td>
-            </mat-checkbox>
-            </td>
-            <td>
-              <button class="icon-button" (click)="(deleteTodoItem(item.id))">
-                <mat-icon color="warn" class="trash" >delete</mat-icon>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <tbody>
+        <tr *ngFor='let item of todoitems$ | async ; let i= index '>
+          <td> {{i+1}}</td>
+          <td>
+            <mat-checkbox (click)="(changeIsDone(item.id, item.task, item.isDone))" color="accent"
+              [(ngModel)]="item.isDone" name="" class="check-box">
+          <td>{{item.task}}</td>
+          </mat-checkbox>
+          </td>
+          <td>
+            <button class="icon-button" (click)="(deleteTodoItem(item.id))">
+              <mat-icon color="warn" class="trash">delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <footer>
