@@ -1,7 +1,6 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Model, TodoItem } from './model'; //not require to use this file like line 19
 
 import { fromEvent, Observable } from 'rxjs';
 
@@ -16,8 +15,6 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {
   }
-  // model = new Model();
-  // isDisplay = false;
 
   /* GET ALL todoitems*/
   todoitems$: Observable<any> = this.http.get('/api/todoitems');
